@@ -18,10 +18,6 @@ resource "helm_release" "traefik-ingress" {
   name       = "ms-traefik-ingress"
   chart      = "traefik"
   repository = "https://helm.traefik.io/traefik"
-  set {
-    name  = "helmVersion"
-    value = "v3.9.0"
-  }
   values = [<<EOF
   service:
     annotations:
